@@ -45,6 +45,10 @@ jobs:
           submodules: recursive
           fetch-depth: 0
           lfs: true
+      - name: Download LFS files
+        run: |
+          git lfs install
+          git lfs pull
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
